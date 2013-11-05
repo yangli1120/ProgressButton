@@ -6,4 +6,6 @@
     <string name="hello_world">Hello world!</string>
 
     <string name="start_download_btn">Download</string>
+    <string name="type_fill_btn">fill type</string>
+    <string name="type_stroke_btn">stroke type</string>
 </resources>

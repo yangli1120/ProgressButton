@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProgressButtonActivity" >
-
     <com.example.demoprogressbutton.ProgressButton
         android:id="@+id/progress_btn"
         android:layout_marginTop="30dp"
@@ -14,4 +13,25 @@
         android:background="@drawable/progress_button_bg"
         android:text="@string/start_download_btn" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/type_fill_btn"
+            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/progress_button_bg"
+            android:text="@string/type_fill_btn"/>
+        <Button
+            android:id="@+id/type_stroke_btn"
+            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="-1dp"
+            android:text="@string/type_stroke_btn"
+            android:background="@drawable/progress_button_bg"/>
+    </LinearLayout>
 </RelativeLayout>

@@ -5,10 +5,14 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class ProgressButtonActivity extends Activity {
     private ProgressButton mProgressBtn;
+    private Button mFillBtn;
+    private Button mStrokeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +28,22 @@ public class ProgressButtonActivity extends Activity {
                 new ProgressTask().execute();
             }
         });
-        mProgressBtn.setType(ProgressButton.TYPE_STROKE);    //the stroke type
-        //mProgressBtn.setType(ProgressButton.TYPE_FILL);    // the fill type
+        mFillBtn = (Button)findViewById(R.id.type_fill_btn);
+        mFillBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                mProgressBtn.setType(ProgressButton.TYPE_FILL);    // the fill type
+            }
+        });
+        mStrokeBtn = (Button)findViewById(R.id.type_stroke_btn);
+        mStrokeBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                mProgressBtn.setType(ProgressButton.TYPE_STROKE);    //the stroke type
+            }
+        });
     }
 
     @Override
